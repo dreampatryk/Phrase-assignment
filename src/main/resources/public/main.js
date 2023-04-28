@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#projects").DataTable({
         ajax: {
-            url: "http://localhost:8080/projects",
+            url: config.projectsUrl,
             dataSrc: 'content',
             processing: true,
             error: function () {

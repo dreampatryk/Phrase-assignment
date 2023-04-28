@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#submit-button").on("click", function (e) {
         e.preventDefault();
-        const configUrl = "http://localhost:8080/save-config";
+        const configUrl = config.configUrl;
         const requestData = {
             userName: $("#username").val(),
             password: $("#password").val(),
