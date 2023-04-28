@@ -31,7 +31,7 @@ public class ConfigurationService {
         repository.saveOrUpdate(login.getUserName(), login.getPassword(), active);
         log.info("The configuration for {} has been saved", login.getUserName());
 
-        if(!active) {
+        if (!active) {
             throw new ConfigException("Failed to activate the configuration");
         }
     }

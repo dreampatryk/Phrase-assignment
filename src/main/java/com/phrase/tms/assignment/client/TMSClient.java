@@ -24,8 +24,13 @@ public class TMSClient {
     private String auth;
     @Value("${tms.projects}")
     private String projects;
-    private final ObjectMapper objectMapper = new ObjectMapper();
-    private final HttpClient client = HttpClient.newHttpClient();
+    private final ObjectMapper objectMapper;
+    private final HttpClient client;
+
+    public TMSClient(ObjectMapper objectMapper, HttpClient client) {
+        this.objectMapper = objectMapper;
+        this.client = client;
+    }
 
     public TMSToken auth(Login login) {
         try {
